@@ -56,6 +56,7 @@ fn count_comment(file_path: &str, comment_regex: &Regex) -> Result<(i64, i64), B
         }
         pbar.next();
     }
+    pbar.close()?;
     println!(
         "{}:\t{} / {}",
         file_name, n_comment_none_white_char, n_total_none_white_char
